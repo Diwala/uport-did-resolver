@@ -17,6 +17,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
+    "prebuild": "npm run clean",
+    "clean": "rimraf lib/*",
     "test": "jest",
     "dev": "tsc --watch",
     "format": "prettier"
@@ -27,6 +29,7 @@
     "jest": "^23.6.0",
     "prettier": "^1.15.3",
     "regenerator-runtime": "^0.12.1",
+    "rimraf": "^2.6.3",
     "ts-jest": "^23.10.5",
     "tslint": "^5.12.0",
     "tslint-config-prettier": "^1.17.0",
@@ -39,6 +42,7 @@
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
+      "d.ts",
       "ts",
       "tsx",
       "js",

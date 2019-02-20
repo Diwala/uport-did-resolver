@@ -1,13 +1,6 @@
+/// <reference path="./types/index.d.ts" />
 import { registerMethod, DIDDocument, ParsedDID, PublicKey } from 'did-resolver'
 import UportLite from 'uport-lite'
-
-export declare interface LegacyUport {
-  publicKey: string
-  publicEncKey?: string
-  name?: string
-  description?: string
-  image?: any
-}
 
 export function convertToDid (did: string, legacy: LegacyUport) {
   const publicKey: PublicKey[] = [{
